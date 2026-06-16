@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GSMZ GLOB</title>
+<style>
+body {font-family: Arial; text-align:center; background:#111; color:#fff;}
+.banner {margin:10px auto; width:320px; height:50px; background:#333; display:flex; align-items:center; justify-content:center;}
+#btn {display:none; padding:10px 20px; background:red; color:white; border:none; cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div class="banner">Banner Ad</div>
+
+<h1>Welcome to GSMZ GLOB</h1>
+
+<div id="timer">12</div>
+<p id="msg">Wait 12 seconds...</p>
+
+<button id="btn">Scroll Down</button>
+
+<div class="banner">Banner Ad</div>
+
+<p>All rights reserved GSMZ GLOB</p>
+<p>onirec@proton.me</p>
+
+<div class="banner">Banner Ad</div>
+
+<script>
+let t = 12;
+let x = setInterval(()=>{
+  t--;
+  document.getElementById("timer").innerText = t;
+  if(t<=0){
+    clearInterval(x);
+    document.getElementById("msg").innerText = "Scroll down";
+    document.getElementById("btn").style.display = "inline-block";
+  }
+},1000);
+</script>
+
+<script src="https://gsmzglob.github.io/scripts/1.js"></script>
+<script src="https://gsmzglob.github.io/scripts/6.js"></script>
+<script src="https://gsmzglob.github.io/scripts/5.js"></script>
+
+</body>
+</html>

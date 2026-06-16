@@ -48,57 +48,10 @@ body {
   font-size: 30px;
   margin: 10px 0;
 }
-
-#adblock-screen {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  color: white;
-  z-index: 99999;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-#adblock-screen h1 {
-  color: #ff3333;
-  font-size: 35px;
-  margin-bottom: 10px;
-}
-
-#adblock-screen p {
-  font-size: 18px;
-  max-width: 500px;
-  line-height: 1.6;
-}
-
-.refresh-btn {
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #ff3333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
-}
 </style>
 </head>
 
 <body>
-
-<div id="adblock-screen">
-  <h1>AdBlocker Detected!</h1>
-  <p>Our website provides entirely free links, and we rely on advertisements to keep this service running and cover server costs. Please disable your AdBlocker and refresh the page to access your download link.</p>
-  <button class="refresh-btn" onclick="window.location.reload();">Refresh Page 🔄</button>
-</div>
 
 <div class="ad"><script src="https://gsmzglob.github.io/scripts/1.js"></script></div>
 
@@ -131,33 +84,21 @@ body {
 <script src="https://gsmzglob.github.io/scripts/6.js"></script>
 
 <script>
-  window.isAdBlockActive = true;
-</script>
-
-<script src="https://gsmzglob.github.io/scripts/ads.js"></script>
-
-<script>
 let time = 15;
 const timer = document.getElementById("timer");
 const btn = document.getElementById("downloadBtn");
 const arrow = document.getElementById("arrow");
 
-window.addEventListener('load', function() {
-  if (window.isAdBlockActive) {
-    document.getElementById("adblock-screen").style.display = "flex";
-  } else {
-    const interval = setInterval(() => {
-      time--;
-      timer.innerText = time;
+const interval = setInterval(() => {
+  time--;
+  timer.innerText = time;
 
-      if(time <= 0){
-        clearInterval(interval);
-        btn.style.display = "inline-block";
-        arrow.innerHTML = "⬇️⬇️";
-      }
-    }, 1000);
+  if(time <= 0){
+    clearInterval(interval);
+    btn.style.display = "inline-block";
+    arrow.innerHTML = "⬇️⬇️";
   }
-});
+}, 1000);
 </script>
 
 </body>

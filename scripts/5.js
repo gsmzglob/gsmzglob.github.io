@@ -1,14 +1,3 @@
-// 1.js
-var uid = '502513';
-var wid = '755132';
-
-var pop_tag = document.createElement('script');
-pop_tag.src = '//cdn.popcash.net/show.js';
-
-document.body.appendChild(pop_tag);
-
-pop_tag.onerror = function () {
-    pop_tag = document.createElement('script');
-    pop_tag.src = '//cdn2.popcash.net/show.js';
-    document.body.appendChild(pop_tag);
-};
+const s = document.createElement("script");
+s.src = "https://pl29845298.effectivecpmnetwork.com/e2/82/ef/e282ef5525597bad1e140ce115ac24a3.js";
+document.head.appendChild(s);
